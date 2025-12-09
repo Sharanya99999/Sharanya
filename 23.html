@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Write a Letter for Sharanya 🎉</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffeef7;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        background: white;
+        width: 90%;
+        max-width: 500px;
+        padding: 30px;
+        margin-top: 40px;
+        border-radius: 18px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #d63384;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+        color: #444;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #d63384;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #b92a70;
+    }
+
+    .success {
+        font-size: 18px;
+        text-align: center;
+        color: green;
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Write a Letter for Sharanya 💌</h1>
+
+    <!-- Replace FORM ACTION with your Google Form link (I will help you) -->
+    <form id="letterForm" action="YOUR_GOOGLE_FORM_LINK_HERE" method="POST" target="hidden_iframe">
+
+        <label>Your Name</label>
+        <input type="text" name="entry.111111" required>
+
+        <label>Your Relation with Her</label>
+        <input type="text" name="entry.222222" required>
+
+        <label>Your Message for Her</label>
+        <textarea name="entry.333333" required></textarea>
+
+        <button type="submit">Send Letter 💌</button>
+    </form>
+
+    <p class="success" id="successMessage">Thank you! Your letter has been sent privately 💖</p>
+
+</div>
+
+<!-- Hidden Iframe for silent Google Form submit -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<script>
+    document.getElementById("letterForm").addEventListener("submit", () => {
+        setTimeout(() => {
+            document.getElementById("successMessage").style.display = "block";
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>
